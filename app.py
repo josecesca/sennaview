@@ -7,8 +7,7 @@ st.set_page_config(page_title="Dashboard Ventas", layout="centered")
 
 # 1. Conexión a la base de datos
 def conectar_db():
-    # Reemplaza con tus credenciales reales
-    engine = create_engine('postgresql://jmesca:esme2023d@170.238.127.17:5432/senna')
+    engine = create_engine(st.secrets["db_url"])
     return engine
 
 st.title("📊 Reporte de Planes")
