@@ -6,9 +6,9 @@ from sqlalchemy import create_engine, text
 st.set_page_config(page_title="Stats Ventas Vehículos", layout="centered")
 
 # Conexión flexible (Nube o Local)
-db_url = "postgresql://jmcesca:esme2023@170.238.127.17:5432/senna"
 
-engine = create_engine(db_url)
+# 1. Conexión a la base de datos
+engine = create_engine(st.secrets["db_url"])
 
 st.title("🚗 Dashboard de Ventas x Modelo")
 
